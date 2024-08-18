@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHOREFY | Домашние обязанности на неделю</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CHOREFY | Домашние обязанности на неделю</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Обязанность</th>
+                <th>Понедельник</th>
+                <th>Вторник</th>
+                <th>Среда</th>
+                <th>Четверг</th>
+                <th>Пятница</th>
+                <th>Суббота</th>
+                <th>Воскресенье</th>
+            </tr>
+        </thead>
+        <tbody id="tasks-table-body">
+            <!-- Статически добавленные задачи -->
+            <tr>
+                <td>Мусор</td>
+                <td class="lev">Лев</td>
+                <td class="lev">Лев</td>
+                <td class="lev">Лев</td>
+                <td class="lev">Лев</td>
+                <td class="lev">Лев</td>
+                <td class="lev">Лев</td>
+                <td class="lev">Лев</td>
+            </tr>
+            <tr>
+                <td>Стирка</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+            </tr>
+            <tr>
+                <td>Белье постельное</td>
+                <td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="nikol">Николь (вечер)</td>
+            </tr>
+            <tr>
+                <td>Пылесос гостинная</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+            </tr>
+            <tr>
+                <td>Пылесос спальня</td>
+                <td class="default"></td><td class="nikol">Николь</td><td class="default"></td><td class="nikol">Николь</td><td class="default"></td><td class="nikol">Николь</td><td class="default"></td>
+            </tr>
+            <tr>
+                <td>Пылесос Оскар</td>
+                <td class="nikol">Николь</td><td class="default"></td><td class="default"></td><td class="nikol">Николь</td><td class="default"></td><td class="default"></td><td class="default"></td>
+            </tr>
+            <tr>
+                <td>Кухня перед сном</td>
+                <td class="nikol">Николь (вечер)</td>
+                <td class="nikol">Николь (вечер)</td>
+                <td class="nikol">Николь (вечер)</td>
+                <td class="nikol">Николь (вечер)</td>
+                <td class="nikol">Николь (вечер)</td>
+                <td class="nikol">Николь (вечер)</td>
+                <td class="nikol">Николь (вечер)</td>
+            </tr>
+            <tr>
+                <td>Посудомойка</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+                <td class="nikol">Николь</td>
+            </tr>
+            <tr>
+                <td>Помыть посудомойку</td>
+                <td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="nikol">Николь (утро)</td>
+            </tr>
+            <tr>
+                <td>Помыть стиралку</td>
+                <td class="nikol">Николь (утро)</td><td class="default"></td><td class="default"></td><td class="nikol">Николь</td><td class="default"></td><td class="default"></td><td class="nikol">Николь (утро)</td>
+            </tr>
+            <tr>
+                <td>Помыть унитаз</td>
+                <td class="default"></td><td class="default"></td><td class="nikol">Николь</td><td class="default"></td><td class="default"></td><td class="default"></td><td class="nikol">Николь</td>
+            </tr>
+            <tr>
+                <td>Поменять таблетку в унитазе</td>
+                <td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="nikol">Николь</td>
+            </tr>
+            <tr>
+                <td>Протереть пыль</td>
+                <td class="nikol">Николь</td><td class="default"></td><td class="nikol">Николь</td><td class="default"></td><td class="default"></td><td class="nikol">Николь</td><td class="default"></td>
+            </tr>
+            <tr>
+                <td>Пылесос коридор</td>
+                <td class="default"></td><td class="default"></td><td class="lev">Лев</td><td class="default"></td><td class="lev">Лев</td><td class="default"></td><td class="lev">Лев</td>
+            </tr>
+            <tr>
+                <td>Экран ТВ + монитор</td>
+                <td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td><td class="default"></td>
+            </tr>
+            <tr>
+                <td>Помыть пол в кухне</td>
+                <td class="default"></td><td class="nikol">Николь</td><td class="default"></td><td class="default"></td><td class="default"></td><td class="lev">Лев</td><td class="default"></td>
+            </tr>
+            <tr>
+                <td>Ванная комната</td>
+                <td class="default"></td><td class="nikol">Николь</td><td class="default"></td><td class="default"></td><td class="default"></td><td class="nikol">Николь</td><td class="default"></td>
+            </tr>
+            <!-- Задачи с текстом "Каждый день" -->
+            <tr>
+                <td>Свалка коридор</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+            </tr>
+            <tr>
+                <td>Свалка угол возле дивана</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+            </tr>
+            <tr>
+                <td>Угол Николь</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+            </tr>
+            <tr>
+                <td>Угол Льва</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+            </tr>
+            <tr>
+                <td>Стол Льва</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+            </tr>
+            <tr>
+                <td>Стол гостинная</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+            </tr>
+            <tr>
+                <td>Дальний угол кухни</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+                <td class="default">Каждый день</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Чего-то не хватает, или убрать добавленные? <a href="config.html">Настроить задачи...</a></p>
+
+    <!-- <div class="legend">
+        <div><span class="lev-color"></span>Лев</div>
+        <div><span class="nikol-color"></span>Николь</div>
+    </div> -->
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tasksTableBody = document.getElementById('tasks-table-body');
+
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+    // Добавляем задачи из Local Storage
+    tasks.forEach(task => {
+        const row = document.createElement('tr');
+        const taskCell = document.createElement('td');
+        taskCell.textContent = task.name;
+        row.appendChild(taskCell);
+
+        for (let i = 0; i < 7; i++) {
+            const dayCell = document.createElement('td');
+            dayCell.className = 'default';
+            dayCell.onclick = function() { toggleAssignee(dayCell); };
+            row.appendChild(dayCell);
+        }
+
+        tasksTableBody.appendChild(row);
+    });
+
+    // Выделяем текущий день
+    highlightToday();
+
+    function highlightToday() {
+        const todayIndex = new Date().getDay(); // Sunday is 0, Monday is 1, etc.
+        const adjustedIndex = todayIndex === 0 ? 7 : todayIndex; // Переводим Sunday = 0 на последний день недели
+        const headers = document.querySelectorAll('th');
+        headers[adjustedIndex].classList.add('highlight-today');
+
+        const rows = tasksTableBody.querySelectorAll('tr');
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            cells[adjustedIndex].classList.add('highlight-today');
+        });
+    }
+});
+
+function toggleAssignee(cell) {
+    if (cell.classList.contains('lev')) {
+        cell.classList.remove('lev');
+        cell.classList.add('nikol');
+        cell.textContent = 'Николь';
+    } else if (cell.classList.contains('nikol')) {
+        cell.classList.remove('nikol');
+        cell.textContent = '';
+        cell.classList.add('default');
+    } else {
+        cell.classList.remove('default');
+        cell.classList.add('lev');
+        cell.textContent = 'Лев';
+    }
+}
+
+
+
+    </script>
+</body>
+</html>

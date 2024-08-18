@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройка обязанностей</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Настройка обязанностей</h1>
+    <a href="index.html">Вернуться к таблице</a>
+    <p>Тут можно добавить задачи ДОПОЛНИТЕЛЬНО к тем, что уже есть (и всегда будут) по умолчанию. </p>
+    <br />
+    <form id="task-form">
+        <label for="task-name">Название обязанности:</label>
+        <input type="text" id="task-name" required>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <h2>Список обязанностей</h2>
+    <ul id="tasks-list">
+        <!-- Список задач будет здесь -->
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+            const tasksList = document.getElementById('tasks-list');
+            const taskForm = document.getElementById('task-form');
+            const taskNameInput = document.getElementById('task-name');
+
+            const renderTasks = () => {
+                tasksList.innerHTML = '';
+                tasks.forEach((task, index) => {
+                    const li = document.createElement('li');
+                    li.textContent = task.name;
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Удалить';
+                    deleteButton.onclick = () => {
+                        tasks.splice(index, 1);
+                        localStorage.setItem('tasks', JSON.stringify(tasks));
+                        renderTasks();
+                    };
+                    li.appendChild(deleteButton);
+                    tasksList.appendChild(li);
+                });
+            };
+
+            taskForm.onsubmit = (event) => {
+                event.preventDefault();
+                const taskName = taskNameInput.value.trim();
+                if (taskName) {
+                    tasks.push({ name: taskName });
+                    localStorage.setItem('tasks', JSON.stringify(tasks));
+                    taskNameInput.value = '';
+                    renderTasks();
+                }
+            };
+
+            renderTasks();
+        });
+    </script>
+</body>
+</html>

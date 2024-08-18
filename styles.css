@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.highlight-today {
+    background-color: #ffd700; /* Золотистый цвет для выделения */
+    color: #333; /* Темный текст для контраста */
+    font-weight: bold; /* Жирный шрифт для выделения */
+    border-left: 2px solid #ffd700;
+    border-right: 2px solid #ffd700;
+}
+
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #dd8aa8;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td:first-child {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 20px;
+}
+
+td.default {
+    background-color: white;
+    color: #333;
+}
+
+td.lev {
+    background-color: yellow;
+    color: #333;
+    cursor: pointer;
+}
+
+td.nikol {
+    background-color: #FFB6C1;
+    color: #333;
+    cursor: pointer;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.legend div span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.lev-color {
+    background-color: yellow;
+}
+
+.nikol-color {
+    background-color: #FFB6C1;
+}
