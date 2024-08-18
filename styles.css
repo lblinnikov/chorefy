@@ -8,6 +8,54 @@ body {
     align-items: center;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #f0f0f0; /* Светло-серый фон */
+    color: #333; /* Темный текст для контраста */
+    text-align: center;
+    padding: 15px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-top: 1px solid #ccc; /* Легкая граница сверху */
+    width: 100%;
+    margin-top: auto; /* Принудительно размещает футер внизу страницы */
+}
+
+footer p {
+    margin: 0;
+}
+
+header {
+    background-color: #f0f0f0; /* Светло-серый фон, как у футера */
+    color: #333; /* Цвет текста */
+    padding: 20px; /* Отступы внутри заголовка */
+    border-bottom: 1px solid #ccc; /* Граница снизу */
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding-left: 10px; /* Отступ слева от иконки */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header i {
+    font-size: 30px; /* Размер иконки */
+    margin-right: 10px; /* Отступ справа от иконки */
+    margin-left: 15px;
+    color: #4CAF50; /* Зеленый цвет для иконки */
+}
+
 .highlight-today {
     background-color: #ffd700; /* Золотистый цвет для выделения */
     color: #333; /* Темный текст для контраста */
