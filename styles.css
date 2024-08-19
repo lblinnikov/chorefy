@@ -1,3 +1,23 @@
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #4CAF50; /* Цвет иконки */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Убедитесь, что кнопка будет всегда на виду */
+}
+
+#theme-toggle:focus {
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+body.dark-mode #theme-icon {
+    color: #FFB6C1; /* Меняем цвет иконки в темном режиме */
+}
+
 @media (max-width: 768px) {
     .hide-on-mobile {
         display: none;
@@ -58,7 +78,7 @@ header {
 header h1 {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding-left: 10px; /* Отступ слева от иконки */
+    padding-left: 30px; /* Отступ слева от иконки */
     font-size: 24px;
     font-weight: bold;
 }
@@ -127,6 +147,7 @@ td:first-child {
     color: #333;
     text-align: left;
     padding-left: 20px;
+    padding-right: 20px;
     border-bottom-left-radius: 8px; /* Закругляем левый нижний угол */
     border-top-left-radius: 8px; /* Закругляем левый верхний угол */
 }
@@ -189,3 +210,152 @@ td.lev, td.nikol {
 .nikol-color {
     background-color: #FFB6C1;
 }
+
+/* Dark Mode через системные настройки */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Темный фон для всей страницы */
+        color: #ffffff; /* Белый текст */
+    }
+
+    header {
+        background-color: #1e1e1e; /* Темный фон для заголовка */
+        color: #ffffff; /* Белый текст */
+        border-bottom: 1px solid #444444; /* Темная граница */
+    }
+
+    footer {
+        background-color: #1e1e1e; /* Темный фон для футера */
+        color: #ffffff; /* Белый текст */
+        border-top: 1px solid #444444; /* Темная граница */
+    }
+
+    table {
+        background-color: #1e1e1e; /* Темный фон для таблицы */
+        color: #ffffff; /* Белый текст */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Темная тень */
+    }
+
+    th, td {
+        background-color: #2b2b2b; /* Темный фон для ячеек */
+        border: 1px solid #444444; /* Темная граница ячеек */
+    }
+
+    th {
+        background-color: #3a3a3a; /* Темный фон для заголовков таблицы */
+    }
+
+    td.lev {
+        background-color: #a6a634; /* Темно-желтый фон для ячеек Льва */
+        color: #000000; /* Темный текст */
+    }
+
+    td.nikol {
+        background-color: #ff6f8a; /* Темно-розовый фон для ячеек Николь */
+        color: #000000; /* Темный текст */
+    }
+
+    .highlight-today {
+        background-color: #ffcc00; /* Яркий золотистый для выделенного дня */
+        color: #000000; /* Темный текст */
+        border-left: 2px solid #ffcc00;
+        border-right: 2px solid #ffcc00;
+    }
+
+    a {
+        color: #4CAF50; /* Яркий зеленый для ссылок */
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    td:first-child {
+        background-color: #333333; /* Темный фон для первой ячейки */
+        color: #ffffff; /* Белый текст для контраста */
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+
+    td {
+        color: #ffffff;
+    }
+
+}
+
+    /* Темная тема через класс dark-mode */
+    body.dark-mode {
+        background-color: #121212; /* Темный фон для всей страницы */
+        color: #ffffff; /* Белый текст */
+    }
+
+    body.dark-mode header {
+        background-color: #1e1e1e; /* Темный фон для заголовка */
+        color: #ffffff; /* Белый текст */
+        border-bottom: 1px solid #444444; /* Темная граница */
+    }
+
+    body.dark-mode footer {
+        background-color: #1e1e1e; /* Темный фон для футера */
+        color: #ffffff; /* Белый текст */
+        border-top: 1px solid #444444; /* Темная граница */
+    }
+
+    body.dark-mode table {
+        background-color: #1e1e1e; /* Темный фон для таблицы */
+        color: #ffffff; /* Белый текст */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Темная тень */
+    }
+
+    body.dark-mode th, body.dark-mode td {
+        background-color: #2b2b2b; /* Темный фон для ячеек */
+        border: 1px solid #444444; /* Темная граница ячеек */
+    }
+
+    body.dark-mode th {
+        background-color: #3a3a3a; /* Темный фон для заголовков таблицы */
+    }
+
+    body.dark-mode td.lev {
+        background-color: #a6a634; /* Темно-желтый фон для ячеек Льва */
+        color: #000000; /* Темный текст */
+    }
+
+    body.dark-mode td.nikol {
+        background-color: #ff6f8a; /* Темно-розовый фон для ячеек Николь */
+        color: #000000; /* Темный текст */
+    }
+
+    body.dark-mode .highlight-today {
+        background-color: #ffcc00; /* Яркий золотистый для выделенного дня */
+        color: #000000; /* Темный текст */
+        border-left: 2px solid #ffcc00;
+        border-right: 2px solid #ffcc00;
+    }
+
+    body.dark-mode a {
+        color: #4CAF50; /* Яркий зеленый для ссылок */
+    }
+
+    body.dark-mode a:hover {
+        text-decoration: underline;
+    }
+
+    body.dark-mode td:first-child {
+        background-color: #333333; /* Темный фон для первой ячейки */
+        color: #ffffff; /* Белый текст для контраста */
+    }
+
+    body.dark-mode h1 {
+        color: #ffffff;
+    }
+
+    body.dark-mode td {
+        color: #ffffff;
+    }
+
+    
+
+

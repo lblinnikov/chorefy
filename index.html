@@ -198,6 +198,10 @@
         </tbody>
     </table>
 
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+
     <p>Чего-то не хватает, или убрать добавленные? <a href="config.html">Настроить задачи...</a></p>
 
     <!-- <div class="legend">
@@ -274,7 +278,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const themeToggle = document.getElementById('theme-toggle');
 
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+// Сохранение темы при перезагрузке
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+}
     </script>
     <footer>
         <p>© 2024 Л и Н. Сделано с любовью и заботой о доме <i class="fas fa-home"></i></p>
