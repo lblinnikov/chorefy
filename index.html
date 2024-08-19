@@ -262,6 +262,18 @@ function toggleAssignee(cell) {
 }
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const todayIndex = new Date().getDay(); // Sunday is 0, Monday is 1, etc.
+    const adjustedIndex = todayIndex === 0 ? 7 : todayIndex; // Переводим Sunday = 0 на последний день недели
+
+    const allDays = document.querySelectorAll('th, td');
+    allDays.forEach((cell, index) => {
+        if ((index % 8) !== adjustedIndex) {
+            cell.classList.add('hide-on-mobile');
+        }
+    });
+});
+
 
     </script>
     <footer>
