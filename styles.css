@@ -97,7 +97,8 @@ a:hover {
 
 table {
     width: auto; /* Автоматическая ширина таблицы */
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     table-layout: auto; /* Позволяет ячейкам автоматически подстраиваться под содержимое */
@@ -105,23 +106,34 @@ table {
 
 th, td {
     border: 1px solid #ddd;
-    padding: 5px 10px; /* Меньшие отступы внутри ячеек */
+    padding: 10px 5px; /* Меньшие отступы внутри ячеек */
     text-align: center;
     white-space: nowrap; /* Предотвращает перенос текста */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень вокруг каждой ячейки */
 }
 
 th {
-    background-color: #dd8aa8;
+    background-color: #ffcccb;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
+    border-top-left-radius: 8px; /* Закругляем левый верхний угол */
+    border-top-right-radius: 8px; /* Закругляем правый верхний угол */
 }
 
 td:first-child {
     background-color: #f0f0f0;
     color: #333;
     text-align: left;
-    padding-left: 5px;
+    padding-left: 20px;
+    border-bottom-left-radius: 8px; /* Закругляем левый нижний угол */
+    border-top-left-radius: 8px; /* Закругляем левый верхний угол */
+}
+
+tr:last-child td {
+    border-bottom-left-radius: 8px; /* Закругляем левый нижний угол */
+    border-bottom-right-radius: 8px; /* Закругляем правый нижний угол */
 }
 
 td.default {
@@ -129,16 +141,24 @@ td.default {
     color: #333;
 }
 
+td {
+    border-radius: 0; /* Убираем закругление у обычных ячеек */
+}
+
 td.lev {
-    background-color: yellow;
+    background-color: ffff99;
     color: #333;
     cursor: pointer;
 }
 
 td.nikol {
-    background-color: #FFB6C1;
+    background-color: #ffb6c1;
     color: #333;
     cursor: pointer;
+}
+
+td.lev, td.nikol {
+    border-radius: 4px; /* Легкое закругление углов для цветных ячеек */
 }
 
 .legend {
